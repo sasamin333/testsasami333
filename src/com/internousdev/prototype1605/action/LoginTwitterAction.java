@@ -6,6 +6,12 @@ package com.internousdev.prototype1605.action;
 
 import java.util.Map;
 
+/**
+ * @author MORITA NAOMI
+ * @since 1.0
+ * @version 1.0
+ */
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -13,9 +19,9 @@ import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.internousdev.prototype1604.dao.LoginOauthDAO;
-import com.internousdev.prototype1604.dto.LoginOauthDTO;
-import com.internousdev.prototype1604.util.TwitterOauth;
+import com.internousdev.prototype1605.dao.LoginOauthDAO;
+import com.internousdev.prototype1605.dto.LoginOauthDTO;
+import com.internousdev.prototype1605.util.TwitterOauth;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class LoginTwitterAction extends ActionSupport implements ServletResponseAware,ServletRequestAware,SessionAware

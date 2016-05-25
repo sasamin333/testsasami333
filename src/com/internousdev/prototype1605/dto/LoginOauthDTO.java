@@ -1,4 +1,4 @@
-package com.internousdev.footprinter.dto;
+package com.internousdev.prototype1605.dto;
 
  /**
  * OAUTHで顧客情報を格納する為のDTOクラス

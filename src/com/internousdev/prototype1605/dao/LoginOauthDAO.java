@@ -1,4 +1,4 @@
-package com.internousdev.footprinter.dao;
+package com.internousdev.prototype1605.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -7,12 +7,12 @@ import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-import com.internousdev.footprinter.dto.LoginOauthDTO;
-import com.internousdev.footprinter.util.DBConnector;
+import com.internousdev.prototype1605.dto.LoginOauthDTO;
+import com.internousdev.prototype1605.util.DBConnector;
 
 /**
  * Oauthでログインに必要な情報を取得する為のクラス
- * @author 堅田 一成
+ * @author MORITA NAOMI
  * @since 1.0
  * @version 1.0
  */
@@ -21,7 +21,7 @@ public class LoginOauthDAO{
 	/**
 	 * 取得した情報を格納する為のDTO
 	 */
-	private LoginOauthDTO dto=new LoginOauthDTO();
+	LoginOauthDTO dto=new LoginOauthDTO();
 	/**
 	 * 取得したユニークIDを照合するためのメソッド
 	 * @param userUniqueId OAuthのサービス先のユニークID
@@ -29,7 +29,7 @@ public class LoginOauthDAO{
 	 * @return result
 	 */
 	public boolean select(String userUniqueId, String oauthName){
-		DBConnector db = new DBConnector("footprinter");
+		DBConnector db = new DBConnector();
 		Connection con = null;
 		boolean result = false;
 		con = db.getConnection();
@@ -66,7 +66,7 @@ public class LoginOauthDAO{
 	 * @return result 結果
 	 */
 	public boolean insert(String uniqueId, String userName, String oauthName) {
-		DBConnector db = new DBConnector("footprinter");
+		DBConnector db = new DBConnector();
 		Connection con = null;
 		boolean result = false;
 		Calendar cal = Calendar.getInstance();
