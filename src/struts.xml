@@ -4,9 +4,14 @@
     "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	<!-- xmlの設定 -->
 	<constant name="struts.ui.theme" value="xhtml" />
+	<constant name="struts.custom.i18n.resources"
+		value="com.internousdev.prototype1605.property.Login,
+		   com.internousdev.prototype1605.property.comment"></constant>
+
 	<package name="com.internousdev.prototype1605.action" extends="struts-default">
-			<action name="Login"
+		<action name="Login"
 			class="com.internousdev.prototype1605.action.LoginAction" method="execute">
 			<result name="success">main.jsp</result>
 			<result name="error">login.jsp</result>

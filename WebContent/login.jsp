@@ -24,7 +24,6 @@
 	</s:form>
 	<BR>
 
-
 	<s:url var="twitter" action="login-twitter" />
 	<s:url var="facebook" action="login-facebook" />
 	<s:url var="google" action="login-google" />
