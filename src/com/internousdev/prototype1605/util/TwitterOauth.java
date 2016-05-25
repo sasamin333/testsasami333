@@ -14,7 +14,7 @@ import twitter4j.auth.RequestToken;
 
  /**
  *TwitterでのOAuthでログインする為のクラス
- * @author 堅田 一成
+ * @author MORITA NAOMI
  * @since 1.0
  * @version 1.0
  */
