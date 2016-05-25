@@ -34,12 +34,24 @@
 	<br>
 
 
+	<label>検索</label>
+	<s:form action="UserSerectAction">
+		<label for="id">ID：</label>
+		<Input type="text" name="id"  /><br>
+		<label for="user">ユーザー名：</label>
+		<Input type="text" name="user"  />
+		<s:property value="errorUser" /><br>
+		<s:submit label="追加" type="button" />
+	</s:form>
+	<br>
+	<br>
+
 	<label>追加</label>
 	<s:form action="UserInsertAction">
 		<label for="user">ユーザー名：</label>
 		<Input type="text" name="user"  />
 		<s:property value="errorUser" /><br>
-		<label for="password">パスワード</label>
+		<label for="password">パスワード：</label>
 		<Input type="text" name="password"/>
 		<s:property value="errorPassword" />
 		<s:submit label="追加" type="button" />
@@ -62,12 +74,12 @@
 
 	<label>更新</label>
 	<s:form action="UserUpdateAction">
-		<label for="id">ID</label>
+		<label for="id">ID：</label>
 		<Input type="text" name="id"  /><br>
-		<label for="user">ユーザー名</label>
+		<label for="user">ユーザー名：</label>
 		<Input type="text" name="user"  />
 		<s:property value="errorUser" /><br>
-		<label for="password">パスワード</label>
+		<label for="password">パスワード：</label>
 		<Input type="text" name="password"  />
 		<s:property value="errorPassword" />
 		<br>
