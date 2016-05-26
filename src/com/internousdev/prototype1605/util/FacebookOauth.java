@@ -43,6 +43,7 @@ public class FacebookOauth extends ActionSupport
 		StringBuffer callbackURL = request.getRequestURL();
 		int index = callbackURL.lastIndexOf("/");
 		callbackURL.replace(index, callbackURL.length(), "").append(CALLBACK_PATH);
+
 		try
 		{
 			response.sendRedirect(facebook.getOAuthAuthorizationURL(callbackURL.toString()));
@@ -51,6 +52,7 @@ public class FacebookOauth extends ActionSupport
 		{
 			e.printStackTrace();
 		}
+
 	}
 
 	public Map<String, String> getAccessToken(HttpServletRequest request, HttpServletResponse response)
