@@ -22,7 +22,8 @@ public class UserSelectDAO {
 	 */
 	public boolean select() throws SQLException{
 			boolean result = false;
-	        Connection conn = DBConnector.getConnection();
+			DBConnector db = new DBConnector();
+	        Connection conn = db.getConnection();
 	        String sql = "SELECT * FROM user";
 
 	         try{

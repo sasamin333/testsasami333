@@ -12,7 +12,8 @@ public class UserDeleteDAO {
 	//ユーザー情報を削除させる為のメソッド
 	public int delete(String user) throws SQLException{
 		int count = 0;
-        Connection conn =  DBConnector.getConnection();
+		DBConnector db = new DBConnector();
+        Connection conn =  db.getConnection();
         String sql = "Delete from user WHERE user= ?";
 
          try{
