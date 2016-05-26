@@ -10,3 +10,4 @@ public class MainD3Action extends ActionSupport{
 	public String execute(){
 		return SUCCESS;
 	}
+}
