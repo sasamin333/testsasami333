@@ -10,11 +10,6 @@
 		value="com.internousdev.prototype1605.property.Login,
 		   com.internousdev.prototype1605.property.comment"></constant>
 
-		   <constant name="struts.custom.i18n.resources"
-		value="com.internousdev.prototype1605.property.Main,
-		   com.internousdev.prototype1605.property.comment"></constant>
-
-
 	<package name="com.internousdev.prototype1605.action" extends="struts-default">
 		<action name="LoginAction" class="com.internousdev.prototype1605.action.LoginAction" method="execute">
 			<result name="success">main.jsp</result>
