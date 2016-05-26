@@ -21,7 +21,7 @@ public class GoGoogleAction extends ActionSupport implements ServletResponseAwar
 	/**
 	 * シリアルバージョンID
 	 */
-	private static final long serialVersionUID = 121246542816959646L;
+	private static final long serialVersionUID = -7619711528878401546L;
 
 
 	/*セッション
