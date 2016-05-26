@@ -21,9 +21,9 @@
 
 <s.form action="main">
 <form action="Main"><input class="btn" type="submit" value="ユーザー情報"/></form>
-<form action="Main-insert"><input class="btn" type="submit" value="登録情報"/></form>
-<form action="Main-d3"><input class="btn" type="submit" value="グラフ"/></form>
-<form action="Main-user"><input class="btn" type="submit" value="戻る"/></form>
+<form action="MainInsert"><input class="btn" type="submit" value="登録情報"/></form>
+<form action="MainD3"><input class="btn" type="submit" value="グラフ"/></form>
+<form action="MainBack"><input class="btn" type="submit" value="戻る"/></form>
 </s.form>
 
 <div class="iframe">
