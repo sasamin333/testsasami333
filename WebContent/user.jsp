@@ -10,7 +10,7 @@
 <title>mysql</title>
 </head>
 <body>
-	<s:form action="UserSelectAction">
+	<s:form action="UserSelect">
 		<s:submit label="データの表示" type="button" />
 		<s:property value="errorSelect" />
 	</s:form>
@@ -23,8 +23,8 @@
 		</tr>
 		<s:iterator value="list">
 			<tr>
-				<td><s:property value="user_id"></s:property></td>
-				<td><s:property value="user_name"></s:property></td>
+				<td><s:property value="id"></s:property></td>
+				<td><s:property value="user"></s:property></td>
 				<td><s:property value="password"></s:property></td>
 
 			</tr>
@@ -32,7 +32,6 @@
 	</table>
 	<br>
 	<br>
-
 
 	<label>検索</label>
 	<s:form action="UserSerectAction">

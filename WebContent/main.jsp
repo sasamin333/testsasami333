@@ -9,10 +9,20 @@
 	<link rel="stylesheet" href="css/lightbox.css">
 	<script type="text/javascript" src="js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+<fmt:setLocale value="${pageContext.request.locale.language}"/>
+<fmt:setBundle basename="com.internousdev.prototype1605.property.Login_en."var="lang"/>
 	<title>メインページ</title>
 	</head>
 <body>
+<BR>
+		<s:textfield name="name" value=""
+			label="%{getText('login.user')}" />
+		<s:textfield name="password" value=""
+			label="%{getText('login.password')}" />
+		<s:submit value="%{getText('login.signIn')}" />
+		<s:submit value="%{getText('login.new')}" />
+	</s:form>
+	<BR>
 	<h1 align="center">ようこそ！</h1>
 	<script src="js/lightbox.js" type="text/javascript"></script>
 	<a href="mainimages/hanabi01.jpg" data-lightbox="group"><img src="mainimages/hanabi01.jpg" width="156" /></a>
