@@ -14,8 +14,7 @@ public class DBConnector
 
 	private static String pass = "mysql";
 
-	public static Connection getConnection()
-	{
+	public Connection getConnection(){
 		Connection con = null;
 		try
 		{

@@ -15,7 +15,7 @@
 <s:form action="Login">
 		<BR>
 		<BR>
-		<s:textfield name="user_name" value=""
+		<s:textfield name="name" value=""
 			label="%{getText('login.user')}" />
 		<s:textfield name="password" value=""
 			label="%{getText('login.password')}" />
