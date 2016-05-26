@@ -26,22 +26,23 @@ public class LoginAction extends ActionSupport implements SessionAware{
         String dtoName = dto.getName();
         String dtoPassword = dto.getPassword();
 
-        if(user_name.equals(dtoName))
-        {
-            if(dtoPassword.equals(dto.getPassword()))
-            {
-                ret = SUCCESS;
-            }
+        if(dtoName != null){
+	        if(user_name.equals(dtoName)){
+	            if(dtoPassword.equals(dto.getPassword())){
+	                ret = SUCCESS;
+	            }
+	        }
         }
         session.put("user_name",dto.getName());
+
         return ret;
     }
 
-    public String getName() {
+    public String getName(){
         return user_name;
     }
 
-    public void setName(String name) {
+    public void setName(String name){
         this.user_name = name;
     }
 
@@ -49,17 +50,15 @@ public class LoginAction extends ActionSupport implements SessionAware{
         return password;
     }
 
-    public void setPassword(String password) {
+    public void setPassword(String password){
         this.password = password;
     }
 
-    public Map<String, Object> getSession() {
+    public Map<String, Object> getSession(){
         return session;
     }
 
-    public void setSession(Map<String, Object> session) {
+    public void setSession(Map<String, Object> session){
         this.session = session;
     }
-
-
 }
