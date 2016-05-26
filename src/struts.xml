@@ -102,17 +102,17 @@
 		<result name="success">user.jsp</result>
 		</action>
 		<!-- メインから登録情報に遷移 -->
-		<action name="MainInsert" class="com.internousdev.prototype1605.action.MainAction" method="execute">
+		<action name="MainInsert" class="com.internousdev.prototype1605.action.MainInsertAction" method="execute">
 		<result name="success">insert.jsp</result>
 		</action>
 
 		<!-- メインからD3に遷移 -->
-		<action name="MainD3" class="com.internousdev.prototype1605.action.MainAction" method="execute">
+		<action name="MainD3" class="com.internousdev.prototype1605.action.MainD3Action" method="execute">
 		<result name="success">d3.jsp</result>
 		</action>
 
 		<!-- 	メインからログインに戻る -->
-		<action name="MainBack" class="com.internousdev.prototype1605.action.MainAction" method="execute">
+		<action name="MainBack" class="com.internousdev.prototype1605.action.MainBackAction" method="execute">
 		<result name="success">login.jsp</result>
 		</action>
 
