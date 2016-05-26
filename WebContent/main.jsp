@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html lang="ja">
 	<head>
@@ -18,16 +19,11 @@
 	<a href="mainimages/hanabi02.jpg" data-lightbox="group"><img src="mainimages/hanabi02.jpg" width="156" /></a>
 	<a href="mainimages/hanabi03.jpg" data-lightbox="group"><img src="mainimages/hanabi03.jpg" width="156" /></a>
 
-
-
-
-<div class="mainlink">
-
-	<A href="user.jsp">ユーザー情報</A> 
-	<A href="insert.jsp">登録情報</A>
-	<A href="d3.jsp">グラフ</A>
-
-</div>
+<s.form action="main">
+<form action="main"><input class="btn" type="submit" value="ユーザー情報"/></form>
+<form action="main-insert"><input class="btn" type="submit" value="グラフ"/></form>
+<form action="main-"><input class="btn" type="submit" value="ユーザー情報"/></form>
+<form action="main-user"><input class="btn" type="submit" value="ユーザー情報"/></form>
 
 <div class="iframe">
 	<iframe

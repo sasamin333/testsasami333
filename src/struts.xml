@@ -16,8 +16,7 @@
 			<result name="error">login.jsp</result>
 		</action>
 
-
-		<!-- Twitter認証を行うアクション -->
+<!-- Twitter認証を行うアクション -->
 		<action name="GoTwitter" class="com.internousdev.prototype1605.action.GoTwitterAction" method="execute">
 			<result name="success">success.jsp</result>
 			<result name="error">login.jsp</result>
@@ -29,14 +28,14 @@
 			<result name="error">login.jsp</result>
 		</action>
 
-        <!-- Google認証を行うアクション -->
-		<action name="login-google" class="com.internousdev.prototype1605.action.GoGoogleAction" method="execute">
+        <!--  Google認証を行うアクション -->
+			<action name="GoGoogle" class="com.internousdev.prototype1605.action.GoGoogleAction" method="execute">
 			<result name="success">success.jsp</result>
 			<result name="error">error.jsp</result>
 		</action>
 
-		<!-- Google認証のコールバックアクション -->
-		<action name="login-google-action" class="com.internousdev.prototype1605.action.LoginGoogleAction" method="execute">
+  		<!-- Google認証のコールバックアクション -->
+		<action name="LoginGoogle" class="com.internousdev.prototype1605.action.LoginGoogleAction" method="execute">
 			<result name="success" type="redirectAction">main</result>
 			<result name="error">error.jsp</result>
 		</action>
@@ -54,7 +53,7 @@
 		</action>
 
 		<!-- MongoのInsertアクション -->
-		<action name="MongoInsertAction" class="com.internousdev.prototype1605.action.MongoInsertAction" method="execute">
+		<action name="MongoInsert" class="com.internousdev.prototype1605.action.MongoInsertAction" method="execute">
 			<result name="success">msuccess.jsp</result>
 			</action>
 
@@ -64,7 +63,7 @@
 		</action>
 
 				<!-- 表示画面 -->
-		<action name="UserSelectAction"
+		<action name="UserSelect"
 		class="com.internousdev.prototype1605.action.UserSelectAction" method="execute">
 		<result name="success">user.jsp</result>
 		<result name="error">user.jsp</result>
@@ -72,31 +71,37 @@
 
 
 		<!-- 登録画面 -->
-		<action name="UserInsertAction"
+		<action name="UserInsert"
 		class="com.internousdev.prototype1605.action.UserInsertAction" method="execute">
 		<result name="success">user.jsp</result>
 		<result name="error">user.jsp</result>
 		</action>
 
 		<!-- 削除画面 -->
-		<action name="UserDeleteAction"
+		<action name="UserDelete"
 		class="com.internousdev.prototype1605.action.UserDeleteAction" method="execute">
 		<result name="success">user.jsp</result>
 		<result name="error">user.jsp</result>
 		</action>
 
 		<!-- 更新画面 -->
-		<action name="UserUpdateAction"
+		<action name="UserUpdate"
 		class="com.internousdev.prototype1605.action.UserUpdateAction" method="execute">
 		<result name="success">user.jsp</result>
 		<result name="error">user.jsp</result>
 		<result name="input">user.jsp</result>
 		</action>
 
-		<action name="GoD3Action" class="com.internousdev.prototype1605.action.GoD3Action"
+		<action name="GoD3" class="com.internousdev.prototype1605.action.GoD3Action"
 			method="execute">
 			<result name="success">/d3.jsp</result>
 		</action>
+
+		<!-- メインからユーザー情報に遷移 -->
+		<action name="Main" class="com.internousdev.prototype1605.action.MainAction" method="execute">
+		<result name="success">user.jsp</result>
+		</action>
+
 
 	</package>
 </struts>
