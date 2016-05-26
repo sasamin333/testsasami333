@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import com.internousdev.prototype1605.dto.UserSelectDTO;
 import com.internousdev.prototype1605.util.DBConnector;
 
 public class UserSelectDAO {
