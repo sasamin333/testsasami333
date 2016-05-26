@@ -36,12 +36,12 @@
 		</action>
 
 		<!-- Facebook認証のコールバックアクション -->
-			<action name="LoginFacebook" class="com.internousdev.prototype1605.action.LoginFacebookAction" method="execute">
-				<result name="success" type="redirectAction">main.jsp</result>
-				<result name="error">error.jsp</result>
-			</action>
+		<action name="LoginFacebook" class="com.internousdev.prototype1605.action.LoginFacebookAction" method="execute">
+			<result name="success" type="redirectAction">main.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
 
-				<!-- MongoのInsertアクション -->
+		<!-- MongoのInsertアクション -->
 		<action name="MongoInsertAction" class="com.internousdev.prototype1605.action.MongoInsertAction" method="execute">
 			<result name="success">msuccess.jsp</result>
 			</action>
