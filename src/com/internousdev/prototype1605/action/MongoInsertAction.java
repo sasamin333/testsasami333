@@ -1,5 +1,6 @@
 package com.internousdev.prototype1605.action;
 
+import com.internousdev.prototype1605.dao.MongoInsertDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -9,9 +10,12 @@ import com.opensymphony.xwork2.ActionSupport;
 public class MongoInsertAction extends ActionSupport {
 
 
-	private static final long serialVersionUID = -8776608656821772942L;
-	//ユーザーID
 
+
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 271445535291743501L;
 	private String name;
 	private String comment;
 
@@ -21,7 +25,7 @@ public class MongoInsertAction extends ActionSupport {
 		boolean ret = dao.insert(name,comment);
 		System.out.println(ret);
 
-
+		System.out.println("1");
 		return result;
 	}
 

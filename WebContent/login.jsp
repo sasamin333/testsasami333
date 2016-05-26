@@ -24,9 +24,9 @@
 	</s:form>
 	<BR>
 
-	<s:url var="twitter" action="login-twitter" />
-	<s:url var="facebook" action="login-facebook" />
-	<s:url var="google" action="login-google" />
+	<s:url var="twitter" action="GoTwitter" />
+	<s:url var="facebook" action="GoFacebook" />
+	<s:url var="google" action="GoGoogle" />
 
 	<s:a href="%{twitter}" >
 		<img src="images/twitter-j.png">

@@ -28,7 +28,7 @@ public class MongoInsertDAO {
 			System.out.println("mongoDAO");
 			mongo = new MongoClient("localhost", 27017);
 
-			db = mongo.getDB("prototype1604");
+			db = mongo.getDB("prototype1605");
 			DBCollection colls = db.getCollection("test");
 			BasicDBObject input = new BasicDBObject();
 
