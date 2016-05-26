@@ -88,6 +88,8 @@
 		<s:submit label="更新" type="button" /><s:property value="errorUpdate" />
 	</s:form>
 <BR><BR>
-<INPUT type="submit" name="submit" value="戻る" onClick="history.go(-1)';">
+<FORM>
+<INPUT type="button" value="戻る" onClick="history.back()">
+</FORM>
 </body>
 </html>
