@@ -23,9 +23,6 @@ svg {
 	<select onChange="top.location.href=value">
 		<option value="#">MENU</option>
 		<option value="main.jsp">main</option>
-		<option value="d3.jsp">D3</option>
-		<option value="sql.jsp">MySQL</option>
-		<option value="mongo.jsp">Mongo</option>
 		<option value="login.jsp">ログアウト</option>
 	</select>
 </form>
@@ -33,7 +30,7 @@ svg {
 	<h1>データに応じてグラフを表示</h1>
 	<div>
 		<button data-svc="mydata1.csv">mydata1.csvを読み込み</button>
-		<button data-svc="mydata1.csv">mydata2.csvを読み込み</button>
+		<button data-svc="mydata2.csv">mydata2.csvを読み込み</button>
 		<button data-src="mydata3.csv">mydata3.csvを読み込み</button>
 	</div>
 	<svg id="myGraph"></svg>
@@ -42,7 +39,7 @@ svg {
 	<div class="form" align="right"></div>
 	<s:form action="GoD3Action">
 		<input type="text" />
-		<input type="submit" value="トップページへ戻る" />
+		<input type="submit" value="main"/>
 	</s:form>
 
 </body>
