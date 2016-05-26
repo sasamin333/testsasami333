@@ -20,10 +20,11 @@
 	<a href="mainimages/hanabi03.jpg" data-lightbox="group"><img src="mainimages/hanabi03.jpg" width="156" /></a>
 
 <s.form action="main">
-<form action="main"><input class="btn" type="submit" value="ユーザー情報"/></form>
-<form action="main-insert"><input class="btn" type="submit" value="グラフ"/></form>
-<form action="main-"><input class="btn" type="submit" value="ユーザー情報"/></form>
-<form action="main-user"><input class="btn" type="submit" value="ユーザー情報"/></form>
+<form action="Main"><input class="btn" type="submit" value="ユーザー情報"/></form>
+<form action="Main-insert"><input class="btn" type="submit" value="登録情報"/></form>
+<form action="Main-d3"><input class="btn" type="submit" value="グラフ"/></form>
+<form action="Main-user"><input class="btn" type="submit" value="戻る"/></form>
+</s.form>
 
 <div class="iframe">
 	<iframe
