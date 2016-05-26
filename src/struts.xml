@@ -33,6 +33,18 @@
 			<result name="error">login.jsp</result>
 		</action>
 
+		<!-- Facebook認証を行うアクション -->
+		<action name = "login-facebook" class="com.internousdev.prototype1605.action.GoFacebookAction" method="execute">
+			<result name="success">success.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<!-- Facebook認証のコールバックアクション -->
+			<action name="login-facebook-action" class="com.internousdev.prototype1605.action.LoginFacebookAction" method="execute">
+				<result name="success" type="redirectAction">main</result>
+				<result name="error">error.jsp</result>
+			</action>
+
 				<!-- MySQLからログイン画面へ遷移 -->
 		<action name="UserBack" class="com.internousdev.prototype1605.action.UserBack"
 			method="execute">
