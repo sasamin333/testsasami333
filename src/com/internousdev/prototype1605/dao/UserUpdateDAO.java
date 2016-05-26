@@ -9,7 +9,8 @@ import com.internousdev.prototype1605.util.DBConnector;
 public class UserUpdateDAO {
 	public int select(String user,String password,int id) throws SQLException{
 	int count = 0;
-    Connection conn =  DBConnector.getConnection();
+	DBConnector db = new DBConnector();
+    Connection conn =  db.getConnection();
     String sql = "UPDATE user SET user=?, password=? WHERE id=?";
 
     	try{

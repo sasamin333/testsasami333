@@ -11,7 +11,8 @@ public class UserInsertDAO {
 	//ユーザー情報を追加させる為のメソッド
 	public int insert(String user, String password) throws SQLException{
 		int count = 0;
-        Connection conn =  DBConnector.getConnection();
+		DBConnector db = new DBConnector();
+        Connection conn =  db.getConnection();
         String sql = "INSERT INTO user (user,password) VALUES (?,?)";
          try{
             PreparedStatement ps = conn.prepareStatement(sql);
