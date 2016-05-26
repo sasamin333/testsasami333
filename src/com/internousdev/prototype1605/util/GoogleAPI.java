@@ -21,7 +21,7 @@ import org.scribe.utils.OAuthEncoder;
 import org.scribe.utils.Preconditions;
 
 /**
- * @author haruna
+ * @author morita
  *
  */
 public class GoogleAPI extends DefaultApi20 {

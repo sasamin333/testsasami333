@@ -24,7 +24,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
- * @author haruna
+ * @author morita
  *
  */
 public class GoogleOauth extends ActionSupport {
@@ -54,10 +54,10 @@ public class GoogleOauth extends ActionSupport {
 	 */
 	public boolean getRequestToken(HttpServletRequest request, HttpServletResponse response) {
 		try {
-			String apiKey = "1063579920963-dqqe7m2b0nu1lphsgniukeec3v3bl6fu.apps.googleusercontent.com";
-			String apiSecret = "4Wr33TzamAxv4neFUzv8PRUO";
-			String callbackUrl = "http://localhost:8080/prototype1604/login-google-action";
-//			String callbackUrl = "http://www.internousdev-b.com/prototype1604/LoginGoogleAction";
+			String apiKey = "337032318060-atvvsdgdsjlmqdqb6a07qsgph6ahhh0h.apps.googleusercontent.com";
+			String apiSecret = "LnY0kNGmz41yAcgYMa0MUJKV";
+			String callbackUrl = "http://localhost:8080/prototype1605/login-google-action";
+//			String callbackUrl = "http://www.internousdev-b.com/prototype1605/LoginGoogleAction";
 
 			OAuthService service = new ServiceBuilder()
 					.provider(GoogleApi.class)
