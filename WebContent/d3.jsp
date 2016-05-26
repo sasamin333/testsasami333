@@ -38,10 +38,9 @@ svg {
 
 	<div class="form" align="right"></div>
 	<s:form action="GoD3Action">
-		<input type="text" />
-		<input type="submit" value="main"/>
+		<form action="GoD3"><input type="text" /></form>
+		<form action="GoD3"><input class="btn" type="submit" value="main"/></form>
 	</s:form>
-
 </body>
 </html>
 
