@@ -11,31 +11,31 @@
 		   com.internousdev.prototype1605.property.comment"></constant>
 
 	<package name="com.internousdev.prototype1605.action" extends="struts-default">
-		<action name="Login" class="com.internousdev.prototype1605.action.LoginAction" method="execute">
+		<action name="LoginAction" class="com.internousdev.prototype1605.action.LoginAction" method="execute">
 			<result name="success">main.jsp</result>
 			<result name="error">login.jsp</result>
 		</action>
 
-<!-- Twitter認証を行うアクション -->
-		<action name="GoTwitter" class="com.internousdev.prototype1605.action.GoTwitterAction" method="execute">
+		<!-- Twitter認証を行うアクション -->
+		<action name="LoginTwitter" class="com.internousdev.prototype1605.action.GoTwitterAction" method="execute">
 			<result name="success">success.jsp</result>
-			<result name="error">login.jsp</result>
+			<result name="error">error.jsp</result>
 		</action>
 
 		<!-- Twitter認証のコールバックアクション -->
-		<action name="LoginTwitter" class="com.internousdev.prototype1605.action.LoginTwitterAction" method="execute">
+		<action name="login-twitter-action" class="com.internousdev.prototype1605.action.LoginTwitterAction" method="execute">
 			<result name="success" type="redirectAction">main.jsp</result>
 			<result name="error">login.jsp</result>
 		</action>
 
         <!--  Google認証を行うアクション -->
-			<action name="GoGoogle" class="com.internousdev.prototype1605.action.GoGoogleAction" method="execute">
+			<action name="LoginGoogle" class="com.internousdev.prototype1605.action.GoGoogleAction" method="execute">
 			<result name="success">success.jsp</result>
 			<result name="error">error.jsp</result>
 		</action>
 
   		<!-- Google認証のコールバックアクション -->
-		<action name="LoginGoogle" class="com.internousdev.prototype1605.action.LoginGoogleAction" method="execute">
+		<action name="login-google-action" class="com.internousdev.prototype1605.action.LoginGoogleAction" method="execute">
 			<result name="success" type="redirectAction">main</result>
 			<result name="error">error.jsp</result>
 		</action>
@@ -47,7 +47,7 @@
 		</action>
 
 		<!-- Facebook認証のコールバックアクション -->
-		<action name="LoginFacebook" class="com.internousdev.prototype1605.action.LoginFacebookAction" method="execute">
+		<action name="login-facebook-action" class="com.internousdev.prototype1605.action.LoginFacebookAction" method="execute">
 			<result name="success" type="redirectAction">main.jsp</result>
 			<result name="error">error.jsp</result>
 		</action>

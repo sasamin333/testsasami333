@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<s:form action="Login">
+<s:form action="LoginAction">
 		<BR>
 		<BR>
 		<s:textfield name="name" value=""
