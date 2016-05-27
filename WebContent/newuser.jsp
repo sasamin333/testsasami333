@@ -25,5 +25,6 @@
 	<s:form action="NewUserBack">
 		<s:submit value="ログイン画面へ戻る"/>
 	</s:form>
+
 </body>
 </html>
