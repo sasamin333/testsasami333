@@ -23,8 +23,8 @@
 		</tr>
 		<s:iterator value="list">
 			<tr>
-				<td><s:property value="id"></s:property></td>
-				<td><s:property value="user"></s:property></td>
+				<td><s:property value="user_id"></s:property></td>
+				<td><s:property value="user_name"></s:property></td>
 				<td><s:property value="password"></s:property></td>
 
 			</tr>
@@ -50,7 +50,7 @@
 		<label for="user_id">ID：</label>
 		<Input type="text" name="user_id"  /><BR>
 				<label for="user_name">ユーザー名：</label>
-		<Input type="text" name="user"  />
+		<Input type="text" name="user_name"  />
 		<s:property value="errorUser" /><br>
 		<label for="password">パスワード：</label>
 		<Input type="text" name="password"/>
@@ -63,7 +63,7 @@
 
 	<label>削除</label>
 	<s:form action="UserDelete">
-		<label for="user">ID：</label>
+		<label for="user_id">ID：</label>
 		<Input type="text" name="user_id"  />
 		<s:property value="errorUser" />
 
@@ -75,9 +75,9 @@
 
 	<label>更新</label>
 	<s:form action="UserUpdate">
-		<label for="id">ID：</label>
+		<label for="user_id">ID：</label>
 		<Input type="text" name="user_id"  /><br>
-		<label for="user">ユーザー名：</label>
+		<label for="user_name">ユーザー名：</label>
 		<Input type="text" name="user_name"  />
 		<s:property value="errorUser" /><br>
 		<label for="password">パスワード：</label>
