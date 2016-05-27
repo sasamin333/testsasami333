@@ -15,8 +15,6 @@ public class MongoSelectAction extends ActionSupport implements SessionAware {
 
 
 
-
-
 	/**
 	 *
 	 */
