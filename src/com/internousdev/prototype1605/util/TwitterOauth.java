@@ -28,12 +28,12 @@ public class TwitterOauth {
 	/**
 	* コンシューマーキー
 	*/
-	private final String CONSUMER_KEY = "O5qbiPQSlnm6OfheB1Xkglp8S";
+	private final String CONSUMER_KEY = "vDDL1aXvk81YOfFlqCgNTuAyz";
 
 	/**
 	* コンシューマーシークレット
 	*/
-	private final String CONSUMER_SECRET = "nkgneac0Jq4jH5sHsSeB18eAuuEUBhsbGNpzN8KP9JU7ahx54i";
+	private final String CONSUMER_SECRET = "AKD5qnPOMXlaIv92LVwNyodmp3o9OSBVk7AX5ZqMoPxVYwUmSz";
 	private static TwitterFactory twitterFactory = new TwitterFactory();
 
 	/**
