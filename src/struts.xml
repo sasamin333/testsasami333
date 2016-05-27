@@ -8,7 +8,8 @@
 	<constant name="struts.ui.theme" value="xhtml" />
 	<constant name="struts.custom.i18n.resources"
 		value="com.internousdev.prototype1605.property.Login,
-		   com.internousdev.prototype1605.property.comment"></constant>
+		   com.internousdev.prototype1605.property.comment,
+		   com.internousdev.prototype1605.property.Main"></constant>
 
 	<package name="com.internousdev.prototype1605.action" extends="struts-default">
 		<!-- ログインを押下 -->
