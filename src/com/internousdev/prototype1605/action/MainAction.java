@@ -8,6 +8,8 @@ public class MainAction extends ActionSupport{
 	private static final long serialVersionUID = 5105580689826821879L;
 
 	public String execute(){
-		return SUCCESS;
+		String result=SUCCESS;
+		return result;
+
 	}
 }
