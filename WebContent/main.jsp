@@ -32,9 +32,12 @@
 	<a href="mainimages/hanabi03.jpg" data-lightbox="group"><img src="mainimages/hanabi03.jpg" width="156" /></a>
 
 
+<div class="iframe">
+	<iframe
+		src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51828.537923993805!2d139.73790965!3d35.719242699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1!5e0!3m2!1sja!2sjp!4v1464079496419"allowfullscreen></iframe>
+</div>
 
-
-
+<BR><BR><BR><BR><BR>
 	<div align="right">
 <%-- 	<s:form action="main"> --%>
 	<s:form action="Main"><s:submit cssClass="btn" value="%{getText('lang.main.Main')}"/></s:form>
@@ -46,9 +49,6 @@
 
 
 
-<div class="iframe">
-	<iframe
-		src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51828.537923993805!2d139.73790965!3d35.719242699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f1!5e0!3m2!1sja!2sjp!4v1464079496419"allowfullscreen></iframe>
-</div>
+
 </body>
 </html>
