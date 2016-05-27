@@ -18,7 +18,7 @@
 		</action>
 
 		<!-- 新規登録を押下 -->
-		<action name="LoginAction" class="com.internousdev.prototype1605.action.LoginAction" method="newUser">
+		<action name="NewUser" class="com.internousdev.prototype1605.action.LoginAction" method="newUser">
 			<result name="success">user.jsp</result>
 		</action>
 
