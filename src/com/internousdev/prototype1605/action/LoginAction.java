@@ -38,6 +38,10 @@ public class LoginAction extends ActionSupport implements SessionAware{
         return ret;
     }
 
+    public String newUser(){
+    	return SUCCESS;
+    }
+
     public String getName(){
         return user_name;
     }

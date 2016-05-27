@@ -11,9 +11,15 @@
 		   com.internousdev.prototype1605.property.comment"></constant>
 
 	<package name="com.internousdev.prototype1605.action" extends="struts-default">
+		<!-- ログインを押下 -->
 		<action name="LoginAction" class="com.internousdev.prototype1605.action.LoginAction" method="execute">
 			<result name="success">main.jsp</result>
 			<result name="error">login.jsp</result>
+		</action>
+
+		<!-- 新規登録を押下 -->
+		<action name="LoginAction" class="com.internousdev.prototype1605.action.LoginAction" method="newUser">
+			<result name="success">user.jsp</result>
 		</action>
 
 		<!-- Twitter認証を行うアクション -->
