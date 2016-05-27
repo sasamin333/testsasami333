@@ -43,7 +43,7 @@
 
   		<!-- Google認証のコールバックアクション -->
 		<action name="login-google-action" class="com.internousdev.prototype1605.action.LoginGoogleAction" method="execute">
-			<result name="success" type="redirectAction">main</result>
+			<result name="success" type="redirectAction">main.jsp</result>
 			<result name="error">error.jsp</result>
 		</action>
 
