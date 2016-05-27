@@ -13,6 +13,11 @@ public class UserInsertAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = -4995201444411491737L;
 
+	/*
+	 * ID
+	 */
+	private int id;
+
 	/**
 	 * ユーザー名
 	 */
@@ -51,11 +56,10 @@ public class UserInsertAction extends ActionSupport {
 	   String result = ERROR;
 	   UserInsertDAO dao = new UserInsertDAO();
 	   int count = 0;
-	   count = dao.insert(user, password);
-	   System.out.println("ここおおおおおおおおおお");
+	   count = dao.insert(id,user, password);
+
 	   if(count > 0){
-		   System.out.println("ここおおおおおおおおおおかなあああああああああ");
-		      return SUCCESS;
+		   return SUCCESS;
 	    }
 
 	   return result;

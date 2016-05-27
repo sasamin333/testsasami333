@@ -11,7 +11,9 @@
 </head>
 <body>
 	<s:form action="UserSelect">
-		<s:submit label="データの表示" type="button" />
+		<label for="user">ユーザー名：</label>
+		<Input type="text" name="user"  />
+		<s:submit label="検索" type="button" />
 		<s:property value="errorSelect" />
 	</s:form>
 	<table>
@@ -33,24 +35,12 @@
 	<br>
 	<br>
 
-	<label>検索</label>
-	<s:form action="UserSerectAction">
-		<label for="user_id">ID：</label>
-		<Input type="text" name="user_id"  /><br>
-		<label for="user_name">ユーザー名：</label>
-		<Input type="text" name="user_name"  />
-		<s:property value="errorUser" /><br>
-		<s:submit label="追加" type="button" />
-	</s:form>
-	<br>
-	<br>
-
 	<label>追加</label>
 	<s:form action="UserInsert">
-		<label for="user_id">ID：</label>
-		<Input type="text" name="user_id"  /><BR>
-				<label for="user_name">ユーザー名：</label>
-		<Input type="text" name="user_name"  />
+		<label for="id">ID：</label>
+		<Input type="text" name="id"  /><BR>
+		<label for="user">ユーザー名：</label>
+		<Input type="text" name="user"  />
 		<s:property value="errorUser" /><br>
 		<label for="password">パスワード：</label>
 		<Input type="text" name="password"/>
@@ -63,8 +53,8 @@
 
 	<label>削除</label>
 	<s:form action="UserDelete">
-		<label for="user_id">ID：</label>
-		<Input type="text" name="user_id"  />
+		<label for="user">ユーザー名：</label>
+		<Input type="text" name="user"  />
 		<s:property value="errorUser" />
 
 		<s:submit label="削除" type="button" /><s:property value="errorDelete" />
@@ -75,16 +65,16 @@
 
 	<label>更新</label>
 	<s:form action="UserUpdate">
-		<label for="user_id">ID：</label>
-		<Input type="text" name="user_id"  /><br>
-		<label for="user_name">ユーザー名：</label>
-		<Input type="text" name="user_name"  />
-		<s:property value="errorUser" /><br>
-		<label for="password">パスワード：</label>
-		<Input type="text" name="password"  />
-		<s:property value="errorPassword" />
+		更新するIDを指定して下さい
+		<s:textfield name="id" value=""
+			label="　　　　　　ID"/>
+		<s:textfield name="user" value=""
+			label="ユーザー名"/>
+		<s:textfield name="password" value=""
+			label="パスワード"/>
 		<br>
-		<s:submit label="更新" type="button" /><s:property value="errorUpdate" />
+		<s:submit value="更新" />
+		<s:property value="errorUpdate" />
 	</s:form>
 <BR><BR>
 <FORM>

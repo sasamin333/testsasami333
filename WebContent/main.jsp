@@ -1,36 +1,50 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@ taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
+
 <html lang="ja">
 	<head>
+	<fmt:setLocale value="${pageContext.request.locale.language}"/>
+	<fmt:setBundle basename="com.internousdev.prototype1605.ploperty.Main"
+			var="lang"/>
+
 	<meta http-equiv="Content-Type" content="text/html; charset="UTF-8" />
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/lightbox.css">
 	<script type="text/javascript" src="js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<fmt:setLocale value="${pageContext.request.locale.language}"/>
-<fmt:setBundle basename="com.internousdev.prototype1605.property.Login_en."var="lang"/>
+
+
 	<title>メインページ</title>
 	</head>
 <body>
-<s:text name ="h1"/>
 
-	<h1 align="center">ようこそ！</h1>
-	
-<s:submit value="%{getText('')"/>
+
+	<h1 align="center" ><s:text name = "lang.main.h1"/></h1>
+
+
+
 	<script src="js/lightbox.js" type="text/javascript"></script>
 	<a href="mainimages/hanabi01.jpg" data-lightbox="group"><img src="mainimages/hanabi01.jpg" width="156" /></a>
 	<a href="mainimages/hanabi02.jpg" data-lightbox="group"><img src="mainimages/hanabi02.jpg" width="156" /></a>
 	<a href="mainimages/hanabi03.jpg" data-lightbox="group"><img src="mainimages/hanabi03.jpg" width="156" /></a>
 
-<s.form action="main">
-<form action="Main"><input class="btn" type="submit" value="ユーザー情報"/></form>
-<form action="MainInsert"><input class="btn" type="submit" value="登録情報"/></form>
-<form action="MainD3"><input class="btn" type="submit" value="グラフ"/></form>
-<form action="MainBack"><input class="btn" type="submit" value="戻る"/></form>
-</form>
-</s.form>
+
+
+
+
+	<div align="right">
+<%-- 	<s:form action="main"> --%>
+	<s:form action="Main"><s:submit cssClass="btn" value="%{getText('lang.main.Main')}"/></s:form>
+	<s:form action="MainInsert"><s:submit cssClass="btn" value="%{getText('lang.main.MainInsert')}"/></s:form>
+	<s:form action="MainD3"><s:submit cssClass="btn"  value="%{getText('lang.main.MainD3')}"/></s:form>
+	<s:form action="MainBack"><s:submit cssClass="btn" value="%{getText('lang.main.MainBack')}"/></s:form>
+<%-- 	</s:form> --%>
+	</div>
+
+
 
 <div class="iframe">
 	<iframe

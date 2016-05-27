@@ -24,7 +24,7 @@ public class UserSelectAction extends ActionSupport {
 	public String execute() throws SQLException {
 		String result = ERROR;
 		UserSelectDAO dao = new UserSelectDAO();
-		if (dao.select()) {
+		if (dao.select(user)) {
 			list = dao.getUserSelect();
 			result = SUCCESS;
 		} else {
