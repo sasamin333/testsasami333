@@ -1,21 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charaset="UTR-8">
+    <meta charset="UTF-8">
     <title>The practice of D3.js</title>
 </head>
 <body>
+
 	<form>
 	<select onChange="top.location.href=value">
 		<option value="#">MENU</option>
-		<option value="main.jsp">main</option>
-		<option value="login.jsp">logout</option>
-		<option value="login.jsp">graph</option>
+		<option value="user.jsp">ユーザー情報</option>
+		<option value="login.jsp">登録情報</option>
 	</select>
 	</form>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script>
 
+	<h1>グラフやん</h1>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <script>
         var dataset = [13, 25, 63, 30, 59, 22];
 
         var w = 500;
@@ -60,17 +66,17 @@
                 height: 20,
                 fill: "blue"
             });
-
     </script>
-<body>
-	<h1>graph</h1>
+
 	<svg id="myGraph"></svg>
 	<script src="js/d3.js"></script>
 
 	<div class="form" align="right"></div>
-	<s:form action="GoD3Action">
-		<form action="GoD3"><input type="text" /></form>
-		<form action="GoD3"><input class="btn" type="submit" value="戻る"/></form>
-	</s:form>
+
+<s:form action="GoD3">
+ <form action="GoD3"><input type="text" /></form>
+	<form action="GoD3"><input class="btn" type="submit" value="戻る"/></form>
+</s:form>
+
 </body>
 </html>
