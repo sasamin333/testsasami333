@@ -53,6 +53,7 @@ public class GoGoogleAction extends ActionSupport implements ServletResponseAwar
 	 * セッションを格納するためのメソッド
      * @param session セッション
 	 */
+
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
