@@ -46,7 +46,7 @@
 	<br>
 
 	<label>追加</label>
-	<s:form action="UserInsertAction">
+	<s:form action="UserInsert">
 		<label for="user_id">ID：</label>
 		<Input type="text" name="user_id"  /><BR>
 				<label for="user_name">ユーザー名：</label>
@@ -62,7 +62,7 @@
 
 
 	<label>削除</label>
-	<s:form action="UserDeleteAction">
+	<s:form action="UserDelete">
 		<label for="user">ID：</label>
 		<Input type="text" name="user_id"  />
 		<s:property value="errorUser" />
@@ -74,7 +74,7 @@
 
 
 	<label>更新</label>
-	<s:form action="UserUpdateAction">
+	<s:form action="UserUpdate">
 		<label for="id">ID：</label>
 		<Input type="text" name="user_id"  /><br>
 		<label for="user">ユーザー名：</label>

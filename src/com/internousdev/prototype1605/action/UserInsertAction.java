@@ -52,8 +52,9 @@ public class UserInsertAction extends ActionSupport {
 	   UserInsertDAO dao = new UserInsertDAO();
 	   int count = 0;
 	   count = dao.insert(user, password);
-
+	   System.out.println("ここおおおおおおおおおお");
 	   if(count > 0){
+		   System.out.println("ここおおおおおおおおおおかなあああああああああ");
 		      return SUCCESS;
 	    }
 

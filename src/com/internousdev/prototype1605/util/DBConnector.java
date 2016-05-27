@@ -6,15 +6,17 @@ import java.sql.SQLException;
 
 public class DBConnector
 {
-	private static String driverName = "com.mysql.jdbc.Driver";
 
-	private static String url = "jdbc:mysql://localhost/datalist";
-
-	private static String user = "root";
-
-	private static String pass = "mysql";
 
 	public Connection getConnection(){
+		String driverName = "com.mysql.jdbc.Driver";
+
+		String url = "jdbc:mysql://localhost/datalist";
+
+		String user = "root";
+
+		String pass = "mysql";
+
 		Connection con = null;
 		try
 		{
