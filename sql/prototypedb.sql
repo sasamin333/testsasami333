@@ -4,8 +4,8 @@ use datalist;
 
 create table user(
 	user_id int not null primary key auto_increment,
-	user_name varchar(32),
-	password varchar(255),
+	user_name varchar(32) not null,
+	password varchar(255) not null,
 		oauth_id varchar(50),
 	oauth_name varchar(50)
 	);
