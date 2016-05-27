@@ -14,7 +14,7 @@ public class UserDeleteDAO {
 		int count = 0;
 		DBConnector db = new DBConnector();
         Connection conn =  db.getConnection();
-        String sql = "Delete from user WHERE user= ?";
+        String sql = "Delete from user WHERE user_name= ?";
 
          try{
             PreparedStatement ps = conn.prepareStatement(sql);

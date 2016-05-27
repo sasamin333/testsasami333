@@ -21,35 +21,35 @@ public class UserSelectDAO {
 	 * @return result データベースからのユーザー一覧情報を格納できたか否か
 	 * @throws SQLException
 	 */
-	public boolean select() throws SQLException {
+	public boolean select(String name) throws SQLException {
 		boolean result = false;
 
 		DBConnector db = new DBConnector();
 		Connection conn = db.getConnection();
-		String sql = "select * from user";
-
+		String sql = "select * from user where user_name=?";
+		//String sql = "select * from user";//全て表示
 		try {
 			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1,name);
 			ResultSet rs = ps.executeQuery();
-
-			while (rs.next()) {
-				UserSelectDTO dto = new UserSelectDTO();
-				dto.setId(rs.getInt("user_id"));
-				dto.setUser(rs.getString("user_name"));
-				dto.setPassword(rs.getString("password"));
-				list.add(dto);
-				result = true;
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		return result;
+            while(rs.next()) {
+            	UserSelectDTO dto = new UserSelectDTO();
+            	dto.setId(rs.getInt("user_id"));
+            	dto.setUser(rs.getString("user_name"));
+              	dto.setPassword(rs.getString("password"));
+            	list.add(dto);
+            	result = true;
+             }
+         }catch (SQLException e) {
+        	 e.printStackTrace();
+         }finally{
+        	 try{
+        		 conn.close();
+ 	         }catch (SQLException e){
+ 	        	 e.printStackTrace();
+ 	         }
+ 	     }
+         return result;
 	}
 
 	/**

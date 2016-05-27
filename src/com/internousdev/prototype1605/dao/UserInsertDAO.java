@@ -9,15 +9,16 @@ import com.internousdev.prototype1605.util.DBConnector;
 public class UserInsertDAO {
 
 	//ユーザー情報を追加させる為のメソッド
-	public int insert(String user, String password) throws SQLException{
+	public int insert(int id, String user, String password) throws SQLException{
 		int count = 0;
 		DBConnector db = new DBConnector();
         Connection conn =  db.getConnection();
-        String sql = "INSERT INTO user (user,password) VALUES (?,?)";
+        String sql = "INSERT INTO user (user_id,user_name,password) VALUES (?,?,?)";
          try{
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1,user);
-            ps.setString(2,password);
+            ps.setInt(1,id);
+            ps.setString(2,user);
+            ps.setString(3,password);
             count = ps.executeUpdate();
 
 
@@ -31,5 +32,5 @@ public class UserInsertDAO {
  	         }
  	     }
          return count;
-}
+	}
 }
