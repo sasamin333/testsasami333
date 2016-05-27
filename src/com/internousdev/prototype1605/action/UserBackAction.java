@@ -10,4 +10,8 @@ public class UserBackAction extends ActionSupport{
 		return SUCCESS;
 	}
 
+	public String loginBack(){
+		return SUCCESS;
+	}
+
 }

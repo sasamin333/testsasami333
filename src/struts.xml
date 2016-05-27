@@ -20,7 +20,7 @@
 
 		<!-- 新規登録を押下 -->
 		<action name="NewUser" class="com.internousdev.prototype1605.action.LoginAction" method="newUser">
-			<result name="success">user.jsp</result>
+			<result name="success">newuser.jsp</result>
 		</action>
 
 		<!-- Twitter認証を行うアクション -->
@@ -86,8 +86,14 @@
 		<!-- 登録画面 -->
 		<action name="UserInsert"
 		class="com.internousdev.prototype1605.action.UserInsertAction" method="execute">
-		<result name="success">user.jsp</result>
-		<result name="error">user.jsp</result>
+		<result name="success">login.jsp</result>
+		<result name="error">newuser.jsp</result>
+		</action>
+
+		<!-- 新規登録から戻るボタンを押下した時 -->
+		<action name="NewUserBack"
+		class="com.internousdev.prototype1605.action.UserBackAction" method="loginBack">
+		<result name="success">login.jsp</result>
 		</action>
 
 		<!-- 削除画面 -->

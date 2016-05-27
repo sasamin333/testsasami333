@@ -32,21 +32,7 @@
 			</tr>
 		</s:iterator>
 	</table>
-	<br>
-	<br>
 
-	<label>追加</label>
-	<s:form action="UserInsert">
-		<label for="id">ID：</label>
-		<Input type="text" name="id"  /><BR>
-		<label for="user">ユーザー名：</label>
-		<Input type="text" name="user"  />
-		<s:property value="errorUser" /><br>
-		<label for="password">パスワード：</label>
-		<Input type="text" name="password"/>
-		<s:property value="errorPassword" />
-		<s:submit label="追加" type="button" />
-	</s:form>
 	<br>
 	<br>
 
