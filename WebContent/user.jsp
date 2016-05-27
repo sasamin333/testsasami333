@@ -23,8 +23,8 @@
 		</tr>
 		<s:iterator value="list">
 			<tr>
-				<td><s:property value="user_id"></s:property></td>
-				<td><s:property value="user_name"></s:property></td>
+				<td><s:property value="id"></s:property></td>
+				<td><s:property value="user"></s:property></td>
 				<td><s:property value="password"></s:property></td>
 
 			</tr>
@@ -35,9 +35,9 @@
 
 	<label>検索</label>
 	<s:form action="UserSerectAction">
-		<label for="id">ID：</label>
+		<label for="user_id">ID：</label>
 		<Input type="text" name="user_id"  /><br>
-		<label for="user">ユーザー名：</label>
+		<label for="user_name">ユーザー名：</label>
 		<Input type="text" name="user_name"  />
 		<s:property value="errorUser" /><br>
 		<s:submit label="追加" type="button" />
