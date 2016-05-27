@@ -20,45 +20,45 @@ public class LoginGoogleAction extends ActionSupport implements
 
 
 	/**
-	 * シリアルバージョンID
+	 * 生成されたシリアルナンバー
 	 */
 	private static final long serialVersionUID = -8029318298651929295L;
 
-	/*
+	/**
 	 * ネットワークネーム
 	 */
 	static final String NETWORK_NAME = "google";
 
-	/*
+	/**
 	 * セッション
 	 */
 	private Map<String, Object> session;
 
-	/*
+	/**
 	 * リクエスト
 	 */
 	private HttpServletRequest request;
 
-	/*
+	/**
 	 * Google認証の実行メソッド
+     * @return SUCCESS
 	 */
 	public String execute(){
 		String rtn = ERROR;
 
 		GoogleOauth googleOauth = new GoogleOauth();
-		Map<String,String>userMap = googleOauth.getAccessToken(request);
+		Map<String, String> userMap = googleOauth.getAccessToken(request);
 
-		if (userMap == null){
+		if (userMap == null) {
 			return rtn;
 		}
 		String uniqueId = userMap.get("id");
 		String userName = userMap.get("name");
-		System.out.println(uniqueId);
 		LoginOauthDAO dao = new LoginOauthDAO();
-		if (dao.select(uniqueId,NETWORK_NAME)) {
+		if (dao.select(uniqueId, NETWORK_NAME)) {
 			LoginOauthDTO dto = dao.getLoginOauthDTO();
-			session.put("loginId",dto.getUserId());
-			session.put("userName",dto.getUserName());
+			session.put("loginId", dto.getUserId());
+			session.put("userName", dto.getUserName());
 			rtn = SUCCESS;
 			return rtn;
 		}
@@ -70,28 +70,31 @@ public class LoginGoogleAction extends ActionSupport implements
 
 		dao.select(uniqueId, NETWORK_NAME);
 		LoginOauthDTO dto = dao.getLoginOauthDTO();
-		session.put("loginId",dto.getUserId());
-		session.put("userName",dto.getUserName());
-		rtn =SUCCESS;
+		session.put("loginId", dto.getUserId());
+		session.put("userName", dto.getUserName());
+		rtn = SUCCESS;
 		return rtn;
 	}
-	// セッションを格納するためのメソッド
-	public void setSession (Map<String,Object> session){
+	 /**
+	  *  セッションを格納するためのメソッド
+	  *  @param session セッション
+	  */
+	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-	//セッションを取得するためのメソッド
-	public Map<String,Object> getSession(){
+	 /**
+	  * セッションを取得するためのメソッド
+	  * @return session
+	  */
+	public Map<String, Object> getSession() {
 		return session;
 	}
-	// リクエストを取得するためのメソッド
-	public void setServletRequest(HttpServletRequest request){
+	 /**
+	  * リクエストを取得するためのメソッド
+	  * @param request リクエスト
+	  */
+	public void setServletRequest(HttpServletRequest request) {
 		this.request = request;
 	}
-	/**
-	 * リクエスト取得メソッド
-	 */
-	//public HttpServletRequest getRequest() {
-	//	return request;
-	//}
 
 }

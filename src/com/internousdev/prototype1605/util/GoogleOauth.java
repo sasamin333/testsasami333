@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.scribe.builder.ServiceBuilder;
-import org.scribe.builder.api.GoogleApi;
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Response;
 import org.scribe.model.Token;
@@ -23,49 +22,53 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opensymphony.xwork2.ActionSupport;
 
+public class GoogleOauth extends ActionSupport {
+
 /**
  * @author morita
  *
  */
-public class GoogleOauth extends ActionSupport {
 
 	/**
 	 *  生成されたシリアルナンバー
 	 */
 	private static final long serialVersionUID = 2056178004412461362L;
 
-	/*スコープのURL
-	 *
+	/**
+	 * スコープのURL
 	 */
 	private static final String SCOPE = "https://www.googleapis.com/auth/userinfo.profile";
 
-	/*レスポンスURL
-	 *
+	/**
+	 * レスポンスURL
 	 */
 	private static final String PROTECTED_RESOURCE_URL = "https://www.googleapis.com/oauth2/v1/userinfo";
 
-	/*空のトークン
-	 *
+	/**
+	 * 空のトークン
 	 */
 	private static final Token EMPTY_TOKEN = null;
-
-	/*
+	/**
 	 * ユーザー情報を取得するメソッド
+	 * @param request リクエスト
+	 * @param response レスポンス
+	 * @return map ユーザー情報
 	 */
-	public boolean getRequestToken(HttpServletRequest request, HttpServletResponse response) {
-		try {
+	public boolean getRequestToken(HttpServletRequest request,HttpServletResponse response){
+
+		try{
 			String apiKey = "337032318060-atvvsdgdsjlmqdqb6a07qsgph6ahhh0h.apps.googleusercontent.com";
-			String apiSecret = "LnY0kNGmz41yAcgYMa0MUJKV";
+			String apiSecret = "21DW40QTlAclr1Tq9z52ukXn";
+			//String callbackUrl = "http://localhost:8080/footprinter/login-google-action";
 			String callbackUrl = "http://localhost:8080/prototype1605/login-google-action";
-//			String callbackUrl = "http://www.internousdev-b.com/prototype1605/LoginGoogleAction";
 
 			OAuthService service = new ServiceBuilder()
-					.provider(GoogleApi.class)
-					.apiKey(apiKey)
-					.apiSecret(apiSecret)
-					.callback(callbackUrl)
-					.scope(SCOPE)
-					.build();
+			.provider(GoogleApi.class)
+			.apiKey(apiKey)
+			.apiSecret(apiSecret)
+			.callback(callbackUrl)
+			.scope(SCOPE)
+			.build();
 
 			@SuppressWarnings("unused")
 			Token accessToken = new Token("ACCESS_TOKEN", "REFRESH_TOKEN");
@@ -73,21 +76,22 @@ public class GoogleOauth extends ActionSupport {
 			HttpSession session = request.getSession();
 			session.setAttribute("SERVICE", service);
 			response.sendRedirect(authorizationUrl);
-		} catch (Exception e) {
+		}catch(Exception e){
 			return false;
 		}
 		return true;
 	}
-
-	/*ユーザー情報の取得するメソッド
-	 *
+	/**
+	 * ユーザー情報のMAPを取得するメソッド
+	 * @param request リクエスト
+	 * @return map
 	 */
-	public Map<String, String> getAccessToken(HttpServletRequest request) {
-		Map<String, String> map;
+	public Map<String,String> getAccessToken(HttpServletRequest request){
+		Map<String,String> map;
 		try {
 			String verifier1 = request.getParameter("code");
 
-			Verifier verifier = new Verifier(verifier1);
+			Verifier verifier =new Verifier(verifier1);
 			Token accessToken = new Token("ACCESS_TOKEN", "REFRESH_TOKEN");
 
 			HttpSession session = request.getSession();
@@ -101,10 +105,11 @@ public class GoogleOauth extends ActionSupport {
 			map = new LinkedHashMap<>();
 			ObjectMapper mapper = new ObjectMapper();
 
-			map = mapper.readValue(response.getBody(), new TypeReference<LinkedHashMap<String, String>>(){});
+			map = mapper.readValue(response.getBody(), new TypeReference<LinkedHashMap<String,String>>(){});
 		} catch (Exception e) {
 			return null;
 		}
 		return map;
 	}
+
 }

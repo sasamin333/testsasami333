@@ -24,21 +24,23 @@ public class GoGoogleAction extends ActionSupport implements ServletResponseAwar
 	private static final long serialVersionUID = -7619711528878401546L;
 
 
-	/*セッション
-	 *
+	/**
+	 * セッション
 	 */
 	private Map<String,Object> session;
 
-	/*レスポンス
-	 *
+	/**
+	 * レスポンス
 	 */
 	private HttpServletResponse response;
 
-	/*リクエスト
+	/**
+	 * リクエスト
 	 */
 	private HttpServletRequest request;
-
-	/*GoogleからのリクエストTokenを取得メソッド
+	/**
+	 * GoogleからリクエストTokenを取得メソッド
+	 * @return SUCCESS ERROR
 	 */
 	public String execute() {
 		GoogleOauth googleOauth = new GoogleOauth();
@@ -47,37 +49,32 @@ public class GoGoogleAction extends ActionSupport implements ServletResponseAwar
 		}
 		return SUCCESS;
 	}
-	/*セッションを格納するためのメソッド
+	/**
+	 * セッションを格納するためのメソッド
+     * @param session セッション
 	 */
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
-	/*セッションを取得するためのメソッド
-	 *
+	/**
+	 * セッションを取得するためのメソッド
+	 * @return session
 	 */
 	public Map<String, Object> getSession() {
 		return session;
 	}
-	//レスポンス格納メソッド
+	/**
+	 * レスポンス格納メソッド
+	 * @param response レスポンス
+	 */
 	public void setServletResponse(HttpServletResponse response) {
 		this.response = response;
 	}
-
-	//リクエストを格納するためのメソッド
+	/**
+	 * リクエストを格納するためのメソッド
+	 * @param request リクエスト
+	 */
 	public void setServletRequest(HttpServletRequest request) {
 		this.request = request;
 	}
-	/**
-	 * リクエスト取得メソッド
-	 */
-//	public HttpServletRequest getRequest() {
-//		return request;
-//	}
-	/**
-	 * レスポンス取得メソッド
-	 * @return response レスポンス
-	 */
-//	public HttpServletResponse getResponse() {
-//		return response;
-//	}
 }

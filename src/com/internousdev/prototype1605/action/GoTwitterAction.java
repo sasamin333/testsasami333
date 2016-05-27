@@ -42,8 +42,9 @@ public class GoTwitterAction extends ActionSupport implements ServletResponseAwa
 	 * TwitterリクエストToken取得メソッド
 	 */
 	public String execute() {
-
 		TwitterOauth twitterOauth = new TwitterOauth();
+		System.out.println(request);
+		System.out.println(response);
 		if (!twitterOauth.getRequestToken(request, response)) {
 			return ERROR;
 		}
