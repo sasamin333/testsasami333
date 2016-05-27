@@ -31,7 +31,7 @@
 
 		<!-- Twitter認証のコールバックアクション -->
 		<action name="login-twitter-action" class="com.internousdev.prototype1605.action.LoginTwitterAction" method="execute">
-			<result name="success" type="redirectAction">main.jsp</result>
+			<result name="success" type="redirectAction">mainaction</result>
 			<result name="error">login.jsp</result>
 		</action>
 
@@ -72,10 +72,10 @@
 
 		<!-- MySQLからログイン画面へ遷移 -->
 		<action name="UserBack" class="com.internousdev.prototype1605.action.UserBackAction" method="execute">
-			<result name="success">login.jsp</result>
+			<result name="success">main.jsp</result>
 		</action>
 
-				<!-- 表示画面 -->
+		<!-- 表示画面 -->
 		<action name="UserSelect"
 		class="com.internousdev.prototype1605.action.UserSelectAction" method="execute">
 		<result name="success">user.jsp</result>

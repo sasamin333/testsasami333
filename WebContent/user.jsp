@@ -76,9 +76,10 @@
 		<s:submit value="更新" />
 		<s:property value="errorUpdate" />
 	</s:form>
-<BR><BR>
-<FORM>
-<INPUT type="button" value="戻る" onClick="history.back()">
-</FORM>
+<BR>
+<BR>
+<s:form action="UserBack">
+	<s:submit value="メインへ戻る"/>
+</s:form>
 </body>
 </html>
