@@ -41,5 +41,42 @@
 	<s:a href="%{google}">
 		<img src="images/google-j.png">
 	</s:a>
+
+<span class="yconnectLogin"></span>
+
+<script type="text/javascript">
+window.yconnectInit = function() {
+    YAHOO.JP.yconnect.Authorization.init({
+        button: {
+            format: "image",
+            type: "a",
+            textType:"a",
+            width: 196,
+            height: 38,
+            className: "yconnectLogin"
+        },
+        authorization: {
+            clientId: " dj0zaiZpPTU4YVRpbE9tYVF3diZzPWNvbnN1bWVyc2VjcmV0Jng9MTE-",
+            redirectUri: "http://www.internousdev-a.com/prototype1605/CallbackAction",
+            scope: "openid email profile address",
+            state: "1234",
+            nonce: "456",
+            windowWidth: "500",
+            windowHeight: "400"
+        },
+        onError: function(res) {
+            // エラー発生時のコールバック関数
+        },
+        onCancel: function(res) {
+            // 同意キャンセルされた時のコールバック関数
+        }
+    });
+};
+(function(){
+var fs = document.getElementsByTagName("script")[0], s = document.createElement("script");
+s.setAttribute("src", "https://s.yimg.jp/images/login/yconnect/auth/1.0.3/auth-min.js");
+fs.parentNode.insertBefore(s, fs);
+})();
+</script>
 </body>
 </html>
