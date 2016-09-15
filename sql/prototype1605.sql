@@ -1,6 +1,6 @@
-drop database if exists datalist;
-create database datalist;
-use datalist;
+drop database if exists prototype1605;
+create database prototype1605;
+use prototype1605;
 
 create table user(
 	user_id int not null primary key auto_increment,
@@ -10,9 +10,7 @@ create table user(
 	oauth_name varchar(50)
 	);
 
-
-
-	insert into user(user_id,user_name,password)values
-	(1,"taro",123),
-	(2,"hana",456),
-	(3,"take",789);
+insert into user(user_id,user_name,password)values
+(1,"taro",123),
+(2,"hana",456),
+(3,"take",789);
